@@ -1,7 +1,9 @@
 ## Dependecy Injection In WPF
 
-This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M)
+This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M).
+
 This Repo target is to create multiple child form in same button.
+
 We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
 ### Step1 Create a WPF (.Net6) Project
