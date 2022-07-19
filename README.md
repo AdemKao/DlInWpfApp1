@@ -1,8 +1,12 @@
 ## Dependecy Injection In WPF
 
 This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M)
+This Repo target is to create multiple child form in same button.
+We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
 ### Step1 Create a WPF (.Net6) Project
+    WPF Project is startup from `App.xaml`,so we need to change the StartupUri.
+
 ### Step2 Delete  `StartupUri="MainWindow.xaml"` in `App.xaml'
 	```
 	    <Application x:Class="WpfApp1.App"
