@@ -2,7 +2,7 @@
 
 This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M).
 
-This Repo target is to create multiple child form in same button.
+This Repo target is to create multiple child forms in same button.
 
 We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
@@ -37,6 +37,7 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
                 AppHost = Host.CreateDefaultBuilder()
                     .ConfigureServices((hostContext, services) =>
                     {
+                        services.AddSingleton<MainWindow>(); //Main Form 
                         //TODO
                     })
                     .Build();
@@ -62,4 +63,16 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
                 base.OnExit(e);
             }
         ```
-
+### Step5 Create TextBox and Button in `MainWindow.xaml`
+    ```
+    <Window x:Class="WpfApp1.MainWindow"
+        ...
+        Title="MainWindow" Height="200" Width="500" FontSize="24">
+        <Grid>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBox x:Name="tb_DataAccessInfo" Margin="10"></TextBox>
+                <Button x:Name="bt_CreateForm" Padding="20 10">Create ChildForm</Button>
+            </StackPanel> 
+        </Grid>
+    </Window>
+    ```
