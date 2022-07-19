@@ -18,6 +18,7 @@ This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2I
 	```
 ### Step3 Install `Microsoft.Extensions.DependencyInjection` and `Microsoft.Extensions.Hosting` from Nuget
 ### Step4 Update code in `App.xaml.cs`
+
     -   import lib
     -   change `namesapce WpfApp1{}`  to `namesapce WpfApp1;`
     -   Create and override three functions
