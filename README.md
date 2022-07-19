@@ -20,11 +20,11 @@ This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2I
 ### Step4 Update code in `App.xaml.cs`
     -   import lib
 
-        ```
-            using Microsoft.Extensions.DependencyInjection;
-            using Microsoft.Extensions.Hosting;
-            using System.Windows;
-        ```
+     ```
+         using Microsoft.Extensions.DependencyInjection;
+         using Microsoft.Extensions.Hosting;
+         using System.Windows;
+     ```
 
     -   change `namesapce WpfApp1{}`  to `namesapce WpfApp1;`
 
