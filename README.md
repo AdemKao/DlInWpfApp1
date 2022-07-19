@@ -22,6 +22,38 @@ This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2I
 -   change `namesapce WpfApp1{}`  to `namesapce WpfApp1;`
 -   Create and override three functions
     -   Constracture
+        ```
+            ...
+            public static IHost? AppHost { get; private set; }
+
+            public App()
+            {
+                AppHost = Host.CreateDefaultBuilder()
+                    .ConfigureServices((hostContext, services) =>
+                    {
+                        //TODO
+                    })
+                    .Build();
+            }
+        ```
     -   OnStartup
+        ```
+            protected override async void OnStartup(StartupEventArgs e)
+            {
+                await AppHost!.StartAsync();
+
+                var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
+                startupForm.Show();
+
+                base.OnStartup(e);
+            }
+        ```
     -   OnExit
+        ```
+            protected override async void OnExit(ExitEventArgs e)
+            {
+                await AppHost!.StopAsync();
+                base.OnExit(e);
+            }
+        ```
 
