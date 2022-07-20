@@ -135,8 +135,7 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
    ```
 ## Step7 Create ChildForm
     Add `ChildForm.xaml` WindowForm
-
-   ```
+```
     //ChilForm.xaml
     <Window x:Class="WpfApp1.ChildForm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -155,4 +154,5 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
         </Grid>
     </Window>
+
    ```
