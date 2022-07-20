@@ -1,7 +1,6 @@
-﻿namespace WpfLib
+﻿namespace WpfLib;
+
+public interface IDataAccess
 {
-    public interface IDataAccess
-    {
-        string GetData();
-    }
+    string GetData();
 }
