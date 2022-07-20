@@ -134,4 +134,24 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
     }
    ```
 ## Step7 Create ChildForm
+    Add `ChildForm.xaml` WindowForm
+    ```
+    //ChilForm.xaml
+    <Window x:Class="WpfApp1.ChildForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="ChildForm" Height="200" Width="300"
+        FontSize="24">
+        <Grid>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBox x:Name="tb_childNo" Margin="10" TextAlignment="Center" >tb_childNo</TextBox>
+                <TextBox x:Name="tb_dataAccess" Margin="10" TextAlignment="Center" >tb_dataAccess</TextBox>
+            </StackPanel>
 
+        </Grid>
+    </Window>
+    ```
