@@ -156,3 +156,4 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
         </Grid>
     </Window>
     ```
+## Step8 Create a `StartupHelper` folder and Factory class
