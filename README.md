@@ -154,5 +154,4 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
         </Grid>
     </Window>
-
-   ```
+```
