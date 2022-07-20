@@ -72,6 +72,7 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
         <Grid>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBox x:Name="tb_DataAccessInfo" Margin="10"></TextBox>
+                <Button x:Name="bt_GetData" Padding="20 10" Click="bt_GetData_Click">Get Data</Button>
                 <Button x:Name="bt_CreateForm" Padding="20 10">Create ChildForm</Button>
             </StackPanel> 
         </Grid>
@@ -93,3 +94,43 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
        }
    }
    ```
+   Then add params in `MainWindow.xaml.cs` constructor and click function
+   ```
+   //MainWindow.xaml.cs
+   ...
+   using WpfLib;
+   namespace WpfApp1;
+
+    public partial class MainWindow : Window
+    {
+    
+        private IDataAccess _dataAccess;
+        public MainWindow(IDataAccess dataAccess)
+        {
+            InitializeComponent();
+            _dataAccess = dataAccess;
+        }
+    
+        private void bt_GetData_Click(object sender, RoutedEventArgs e)
+        {
+            tb_DataAccessInfo.Text = _dataAccess.GetData();
+        }
+    }
+   ```
+   And then the import part is need to add `AddTransient` in `App.xaml.cs`
+   ```
+   //App.xaml.cs
+   ...
+       public App()
+    {
+        AppHost = Host.CreateDefaultBuilder()
+            .ConfigureServices((hostContext, services) =>
+            {
+                ...
+                services.AddTransient<IDataAccess, DataAccess>();
+                
+            })
+            .Build();
+    }
+   ```
+

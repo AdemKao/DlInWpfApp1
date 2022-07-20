@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
+using WpfLib;
 
 namespace WpfApp1;
 
@@ -17,6 +18,7 @@ public partial class App : Application
             .ConfigureServices((hostContext, services) =>
             {
                 services.AddSingleton<MainWindow>();
+                services.AddTransient<IDataAccess, DataAccess>();
                 
             })
             .Build();

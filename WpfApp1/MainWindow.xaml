@@ -9,6 +9,7 @@
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBox x:Name="tb_DataAccessInfo" Margin="10"></TextBox>
+            <Button x:Name="bt_GetData" Padding="20 10" Click="bt_GetData_Click">Get Data</Button>
             <Button x:Name="bt_CreateForm" Padding="20 10">Create ChildForm</Button>
         </StackPanel>
 
