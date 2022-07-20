@@ -1,8 +1,8 @@
-## Dependecy Injection In WPF
+## Dependency Injection In WPF
 
-This Repo is demo from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M).
+This Repo is demo Dependency Inject in .Net6 which is from [leadmagnets.app](https://www.youtube.com/watch?v=dLR_D2IJE1M).
 
-This Repo target is to create multiple child forms in same button.
+This target is to create multiple child forms in same button.
 
 We will use `Factory Pattern` and `Delegate Pattern` in this project.
 
@@ -26,6 +26,7 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
 ### Step4 Update code in `App.xaml.cs`
 -   import lib
 -   change `namesapce WpfApp1{}`  to `namesapce WpfApp1;`
+    this is new for above C#.10, call [File Scoped Namespaces](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces).
 -   Create and override three functions
     -   Constracture
         ```
@@ -77,4 +78,19 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
     </Window>
     ```
 
-## Step6 
+## Step6 Add Some Data to TextBox
+    This step we need to create some test data,so we will create a new project `WpfLib`.
+    Then Create a class `DataAccess.cs` and `IDataAccess.cs`.
+
+    ```
+    //DataAccess.cs
+    namespace WpfLib;
+    
+    public class DataAccess :IDataAccess
+    {
+        public string GetData()
+        {
+            return "This is calling DataAccess GetData().";
+        }
+    }
+    ```
