@@ -135,6 +135,7 @@ We will use `Factory Pattern` and `Delegate Pattern` in this project.
    ```
 ## Step7 Create ChildForm
     Add `ChildForm.xaml` WindowForm
+
     ```
     //ChilForm.xaml
     <Window x:Class="WpfApp1.ChildForm"
